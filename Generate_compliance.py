@@ -98,7 +98,7 @@ COMPLIANCE_SHEET_NAME = "Compliance Manager"
 COMPLIANCE_ID_PREFIX = "CO"
 PAD_NUMERIC_IDS = False  # False => CO-1, CO-2. True => CO-001, CO-002.
 
-ADMIN_PASSWORD = ""
+ADMIN_PASSWORD = "Crm@compliance"
 ALERT_DAYS = 20
 DATE_FORMAT = "%d-%m-%Y"
 AUTO_OPEN_BROWSER = False
