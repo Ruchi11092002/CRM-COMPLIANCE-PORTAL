@@ -49,7 +49,7 @@ import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent
 
-EXCEL_PATH = BASE_DIR / "data" / "compliance_master.xlsx"
+EXCEL_PATH = BASE_DIR / "Data" / "compliance_master.xlsx"
 
 # Folder where compliance certificates / documents will be stored.
 # Earlier folder name was "uploads". This has now been renamed as requested.
@@ -101,7 +101,7 @@ PAD_NUMERIC_IDS = False  # False => CO-1, CO-2. True => CO-001, CO-002.
 ADMIN_PASSWORD = "Crm@compliance"
 ALERT_DAYS = 20
 DATE_FORMAT = "%d-%m-%Y"
-AUTO_OPEN_BROWSER = True
+AUTO_OPEN_BROWSER = False
 
 # Excel column mapping for Compliance Manager sheet.
 COLUMN_MAPPING: Dict[str, str] = {
@@ -352,7 +352,7 @@ def resolve_excel_file() -> Path:
     if EXCEL_PATH.exists():
         return EXCEL_PATH
 
-    data_dir = BASE_DIR / "data"
+    data_dir = BASE_DIR / "Data"
     xlsx_files = [p for p in data_dir.glob("*.xlsx") if not p.name.startswith("~$")]
 
     if len(xlsx_files) == 1:
