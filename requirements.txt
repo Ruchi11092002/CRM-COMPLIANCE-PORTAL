@@ -1,6 +1,2 @@
 pandas
 openpyxl
-Flask
-gunicorn
-msal
-requests
